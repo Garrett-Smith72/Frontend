@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  /* You can add custom utility classes or global layout rules here if needed */
+  .snappy {
+    @apply transition-all duration-100 ease-in-out;
+  }
+}
