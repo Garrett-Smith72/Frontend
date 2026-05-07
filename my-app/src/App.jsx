@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import SideNavBar from './components/SideNavBar';
+import MobileHeader from './components/MobileHeader';
 import StatusLine from './components/StatusLine';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,6 +11,7 @@ import Status from './pages/Status';
 
 function App() {
   const [status, setStatus] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,8 +31,13 @@ function App() {
 
   return (
     <>
-      <SideNavBar currentPath={location.pathname} />
-      <main className="flex-1 md:ml-64 flex flex-col min-h-screen">
+      <MobileHeader onMenuClick={() => setIsMobileMenuOpen(true)} />
+      <SideNavBar 
+        currentPath={location.pathname} 
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
+      <main className="flex-1 md:ml-64 flex flex-col min-h-screen pt-[65px] md:pt-0">
         <Routes>
           <Route path="/" element={<Home status={status} />} />
           <Route path="/projects" element={<Projects />} />
