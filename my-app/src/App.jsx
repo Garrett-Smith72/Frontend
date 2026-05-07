@@ -14,7 +14,8 @@ function App() {
 
   useEffect(() => {
     // Fetch data from the Rust backend
-    fetch('http://localhost:8080/api/status')
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    fetch(`${apiUrl}/api/status`)
       .then(res => res.json())
       .then(data => setStatus(data))
       .catch(err => console.error("Failed to fetch system status:", err));
