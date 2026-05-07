@@ -56,7 +56,7 @@ export default function ProjectsArchitecture({ status }) {
               <h4 className="font-headline text-xl text-tertiary font-bold">The Build</h4>
               <span className="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-mono text-[10px] uppercase border border-outline-variant/20">Dev_Log</span>
             </div>
-            <p className="text-on-surface-variant text-sm font-body mb-4 max-w-xl">A technical deep-dive into residential renovations. Applying systems engineering principles to interior remodeling and the Parsons cedar deck project. Structural integrity meets aesthetic precision.</p>
+            <p className="text-on-surface-variant text-sm font-body mb-4 max-w-xl">A technical deep-dive into residential renovations. Applying systems engineering principles to interior remodeling. Structural integrity meets aesthetic precision.</p>
             <a className="text-primary text-sm font-mono flex items-center gap-1 hover:text-white transition-colors w-fit group" href="#">
               READ_LOGS <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
